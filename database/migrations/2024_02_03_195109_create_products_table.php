@@ -19,7 +19,7 @@ return new class extends Migration
             $table->float('price', 8, 2);
             $table->integer('promo')->default(0);
             $table->integer('stock')->default(0);
-            $table->string('spec_id');
+            $table->bigInteger('spec_id');
             $table->timestamps();
         });
     }
