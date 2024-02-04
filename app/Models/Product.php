@@ -20,7 +20,7 @@ class Product extends Model
         'spec_id'
     ];
 
-    public function Spec()
+    public function spec()
     {
         return $this->belongsTo(Spec::class);
     }

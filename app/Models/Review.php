@@ -17,12 +17,12 @@ class Review extends Model
         'user_id'
     ];
 
-    public function Product()
+    public function product()
     {
         return $this->belongsTo(Product::class);
     }
 
-    public function User()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

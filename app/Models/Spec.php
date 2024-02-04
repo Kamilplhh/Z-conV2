@@ -26,7 +26,7 @@ class Spec extends Model
         'label_12',
     ];
 
-    public function Category()
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }
