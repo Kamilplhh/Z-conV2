@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Spec;
 
 class Product extends Model
 {
@@ -18,4 +19,9 @@ class Product extends Model
         'stock',
         'spec_id'
     ];
+
+    public function Spec()
+    {
+        return $this->belongsTo(Spec::class);
+    }
 }
