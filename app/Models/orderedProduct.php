@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Order;
+use App\Models\Product;
 
 class orderedProduct extends Model
 {
@@ -15,4 +17,14 @@ class orderedProduct extends Model
         'product_id',
         'order_id'
     ];
+
+    public function Order()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
+    public function Product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
