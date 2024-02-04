@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Category;
 
 class Spec extends Model
 {
@@ -24,4 +25,9 @@ class Spec extends Model
         'label_11',
         'label_12',
     ];
+
+    public function Category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
