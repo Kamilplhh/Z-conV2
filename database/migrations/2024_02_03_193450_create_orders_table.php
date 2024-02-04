@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('city')->nullable();
             $table->float('price', 8, 2);
             $table->string('invoice')->unique();
+            $table->bigInteger('user_id');
             $table->timestamps();
         });
     }
