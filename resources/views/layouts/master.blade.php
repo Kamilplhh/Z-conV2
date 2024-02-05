@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Punkt Odniesienia">
+    <meta name="author" content="Kamil_PLHH">
 
     <title>Z-con</title>
 
@@ -19,21 +19,26 @@
 
 <body>
     @section('navbar')
-    <div class="navbar">
-        @if (Route::has('login'))
-        @auth
-            <a href="{{ url('/account') }}">{{ Auth::user()->name }}</a>
-            <a class="nav-link d-flex justify-content-end" href="{{ route('logout') }}" onclick="event.preventDefault();
+    <div class="navbar sticky-top navbar-dark bg-dark">
+        <div>
+            
+        </div>
+        <div>
+            @if (Route::has('login'))
+            @auth
+            <a class="navbar-brand" href="{{ url('/account') }}">{{ Auth::user()->name }}</a>
+            <a class="navbar-brand" href="{{ route('logout') }}" onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">Wyloguj się
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>
             </a>
-        @else
-            <a href="{{ route('login') }}">Login</a>
-            <a href="{{ route('register') }}">Register</a>
-        @endif
-        @endauth
+            @else
+            <a class="navbar-brand" href="{{ route('login') }}">Login</a>
+            <a class="navbar-brand" href="{{ route('register') }}">Register</a>
+            @endif
+            @endauth
+        </div>
     </div>
 
     <div class="content">
