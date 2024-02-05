@@ -29,7 +29,7 @@
                             <label for="surrname" class="col-md-4 col-form-label text-md-end">{{ __('Surrname') }}</label>
 
                             <div class="col-md-6">
-                                <input id="surrname" type="text" class="form-control" name="surrname" required autocomplete="name">
+                                <input id="surrname" type="text" class="form-control" name="surrname" value="{{ old('surrname') }}" required autocomplete="name">
                             </div>
                         </div>
 
