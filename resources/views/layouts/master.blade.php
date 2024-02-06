@@ -15,14 +15,13 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     @vite('resources/js/app.js')
+    @vite('resources/css/app.css')
 </head>
 
 <body>
     @section('navbar')
-    <div class="navbar sticky-top navbar-dark bg-dark">
-        <div>
-            
-        </div>
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between">
+        <a class="navbar-brand logo" href="/">Z-con</a>
         <div>
             @if (Route::has('login'))
             @auth

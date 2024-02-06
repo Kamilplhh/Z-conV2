@@ -1,0 +1,8 @@
+.logo::first-letter {
+    font-size: 200%;
+    color: #2be249;
+  }
+
+.logo {
+    padding: 0 !important;
+}
