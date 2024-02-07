@@ -7,6 +7,6 @@ window.$ = $;
 $('.fa-user').on("click", function () {
     $('#login').toggle();
     setTimeout(function () {
-
-    }, 1000);
+        $('#login').toggle();
+    }, 3000);
 })

@@ -13,3 +13,7 @@
   color: #2be249;
   transform: scale(1.1);
 }
+
+#login {
+  display: none;
+}
