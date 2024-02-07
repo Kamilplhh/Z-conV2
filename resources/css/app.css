@@ -1,8 +1,15 @@
 .logo::first-letter {
-    font-size: 200%;
+    font-size: 125%;
     color: #2be249;
+    padding-left: .25em;
   }
 
-.logo {
-    padding: 0 !important;
+.fa {
+  cursor: pointer;
+  transition: .5s;
+}
+
+.fa:hover {
+  color: #2be249;
+  transform: scale(1.1);
 }

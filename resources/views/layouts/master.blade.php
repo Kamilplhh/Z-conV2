@@ -20,23 +20,32 @@
 
 <body>
     @section('navbar')
-    <div class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between">
-        <a class="navbar-brand logo" href="/">Z-con</a>
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="/">
+            <div class="d-flex align-items-center">
+                <h1 class="logo">Z</h1>-CON
+            </div>
+        </a>
         <div>
-            @if (Route::has('login'))
             @auth
-            <a class="navbar-brand" href="{{ url('/account') }}">{{ Auth::user()->name }}</a>
-            <a class="navbar-brand" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">Wyloguj się
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </a>
-            @else
-            <a class="navbar-brand" href="{{ route('login') }}">Login</a>
-            <a class="navbar-brand" href="{{ route('register') }}">Register</a>
-            @endif
+            <i class="fa-solid fa-heart fa-xl px-2 fa"></i>
             @endauth
+            <i class="fa-solid fa-user fa-xl px-2 fa"></i>
+            <i class="fa-solid fa-cart-shopping fa-xl px-2 fa"></i>
+            <div id="login">
+                @auth
+                <a class="navbar-brand" href="{{ url('/account') }}">{{ Auth::user()->name }}</a>
+                <a class="navbar-brand" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">Wyloguj się
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </a>
+                @else
+                <a class="navbar-brand" href="{{ route('login') }}">Login</a>
+                <a class="navbar-brand" href="{{ route('register') }}">Register</a>
+                @endauth
+            </div>
         </div>
     </div>
 

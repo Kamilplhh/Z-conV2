@@ -21,7 +21,11 @@
 <body>
     @section('navbar')
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand logo" href="/">Z-con</a>
+        <a class="navbar-brand" href="/">
+            <div class="d-flex align-items-center">
+                <h1 class="logo">Z</h1>-CON
+            </div>
+        </a>
     </nav>
 
     <div class="content">
