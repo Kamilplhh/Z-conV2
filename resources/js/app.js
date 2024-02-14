@@ -4,9 +4,18 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import $, { error } from 'jquery';
 window.$ = $;
 
-$('.fa-user').on("click", function () {
+$('.fa-user').on("mouseenter", function () {
     $('#login').toggle();
-    setTimeout(function () {
-        $('#login').toggle();
-    }, 3000);
+})
+
+$('.fa-user').on("mouseleave", function () {
+    $('#login').toggle();
+})
+
+$('#login').on("mouseenter", function () {
+    $('#login').toggle();
+})
+
+$('#login').on("mouseleave", function () {
+    $('#login').toggle();
 })

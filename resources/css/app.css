@@ -1,19 +1,26 @@
 .logo::first-letter {
-    font-size: 125%;
-    color: #2be249;
-    padding-left: .25em;
-  }
-
-.fa {
-  cursor: pointer;
-  transition: .5s;
+  font-size: 125%;
+  color: #2be249;
+  padding-left: .25em;
 }
 
-.fa:hover {
-  color: #2be249;
+.link {
+  cursor: pointer !important;
+  transition: .5s !important;
+  padding: 1em;
+}
+
+.link:hover {
+  color: #2be249 !important;
   transform: scale(1.1);
 }
 
 #login {
+  background-color: #212529;
+  padding: 1em;
+  border: 1px solid #2f3336;
+  border-radius: 20px;
   display: none;
+  position: absolute !important;
+  right: 100;
 }
